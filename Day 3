@@ -1,0 +1,136 @@
+ Question 1:-
+ #include<iostream>
+ using namespace std;
+
+ struct Node
+ {
+   int data 
+   Node* next;
+ };
+ 
+ Node*create(int);
+ Node*insert_beg(node*,int);
+ Node*insert_end(node*,int);
+ Node*delete_beg();
+ Node*delete_end();
+ void display(node*head);
+
+
+ Node*insert_beg(Node *head, int data)
+ {
+   Node*np = create(data);
+   if(head)
+   {
+     Head=np;
+     return head;
+   }
+   np->next=head;
+   head=np;
+   return head;
+ }
+
+ Node*insert_end(node*head,int x)
+ {
+   Node*fst =create(x);
+   Node*snd = head;
+   if(head==null)
+   {
+     Head=fst;
+     return head;
+   }
+   While(snd->next ! =Null)
+   {
+     Snd=snd->next;
+   }
+   snd->next =fst;
+   return head;
+ }
+
+ Node *delete_beg(node*head)
+ {
+    Node*fst=null;
+    if(head==null) 
+    {
+      Count<<"list is empty, so nothing to delete";
+      return head;
+    }
+    else
+    {
+      fst=head->next;
+      delete (head);
+    }
+    return fst;
+ }
+ Node* delete_end(node*head)
+ {
+   Node*temp=head;
+   if(head==null)
+   { 
+     Count<<"list is empty,so nothing to delete";
+     return head;
+   }
+   if(head ->next->next!=null)
+   {
+     delete head;
+     return null;
+   }
+   While(temp->next->next!=null)
+   {
+     temp=temp->next;
+   }
+   temp->next=null;
+   return head;
+ }
+
+ Void display(node* head)
+ {
+   if(!head)
+   {
+    Count<<"\n There are no values in the list"<<end1;
+    return;
+   }
+   Node*snd=head;
+   Count<<"\nlist elements are :"<<end1;
+   While(snd!= Null)
+   {
+     Cout<<snd->data<<" ";
+     Snd =snd->next;
+   }
+ }
+
+ int main()
+ {
+   Node*head=null;
+   
+   //Delete_beg(head);
+   Cout<<"\nAdding values to list from beginning"<<end1;
+   head = insert_beg(head,10);
+   head = insert_beg(head,20);
+   head = insert_beg(head,30);
+   display(head);
+   Cout<<"\nDeleting value from beginning"<<end1;
+   head= delete_beg(head);
+   display(head);
+   Cout<<"\nDeleting value from beginning"<<end1;
+   head = delete_beg(head);
+   display (head);
+   Cout<<"\nDeleting value from beginning"<<end1;
+   head = delete_beg(head);
+   display (head);
+
+   Cout<<\nAdding values to list from end"<<end1;
+   head = insert_end(head,10);
+   head = insert_end(head,20);
+   head = insert_end(head,30);
+   display(head);
+   Cout<<"\nDeleting value from end"<<end1;
+   head = delete_end(head);
+   display (head);
+   Cout<<"\nDeleting value from end"<<end1;
+   head = delete_end(head);
+   display (head);
+   Cout<<"\nDeleting value from end"<<end1;
+   head = delete_end(head);
+   display (head);
+   return 0;
+ }
