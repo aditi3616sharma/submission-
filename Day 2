@@ -1,0 +1,22 @@
+ Question 1:- find the output 
+ int i=0,j=0;
+ int *p=&i;*q=&j;
+ q=p;
+ p-q=2;
+ Count <<i>>j;
+Solution:-
+ #include<iostream>
+ Using namespace std
+
+ int main(){
+           // Your code goes here
+           int i =0,j=0;
+           int *p=&i;*q=&j;
+           q=p;
+           p-q=2;
+           Count<<i>>""j;
+           return 0;
+ }
+
+ Output:
+ 20
